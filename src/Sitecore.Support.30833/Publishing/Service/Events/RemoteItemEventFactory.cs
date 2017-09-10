@@ -14,7 +14,7 @@
     using Sitecore.Publishing.Service;
     using System.Collections.Concurrent;
 
-    public class PatchedRemoteItemEventFactory : Sitecore.Publishing.Service.Events.RemoteItemEventFactory
+    public class RemoteItemEventFactory : Sitecore.Publishing.Service.Events.RemoteItemEventFactory
     {
         protected readonly ConcurrentDictionary<string, ScLanguage> _threadSafeLangCache = new ConcurrentDictionary<string, ScLanguage>();
 

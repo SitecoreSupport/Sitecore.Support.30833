@@ -7,7 +7,6 @@
     using Sitecore.Publishing.Service.Pipelines.BulkPublishingEnd;
     using Sitecore.Publishing.Service.Security;
     using Sitecore.Publishing.Service.SitecoreAbstractions;
-    using Sitecore.Support.Publishing.Service.Events;
     using System;
     using System.Linq;
     using System.Reflection;
@@ -15,7 +14,7 @@
 
     public class RaiseRemoteEvents : Sitecore.Publishing.Service.Pipelines.BulkPublishingEnd.RaiseRemoteEvents
     {
-        protected readonly PatchedRemoteItemEventFactory _patchedRemoteItemEventFactory = new PatchedRemoteItemEventFactory();
+        protected readonly Events.RemoteItemEventFactory _patchedRemoteItemEventFactory = new Events.RemoteItemEventFactory();
 
         public RaiseRemoteEvents(string remoteEventCacheClearingThreshold, ITargetCacheClearHistory targetCacheClearHistory) : base(remoteEventCacheClearingThreshold, targetCacheClearHistory)
         { }
